@@ -7,17 +7,18 @@ html {
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-size: 1rem;
 }
 
 body {
     /* background-image: url("https://images.unsplash.com/photo-1491002052546-bf38f186af56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTgwOTN8MHwxfHNlYXJjaHwzfHxzbm93aW5nfGVufDB8fHx8MTY4NTQwMTYzNnww&ixlib=rb-4.0.3&q=80&w=1080"); */
-    font: 1em sans-serif;
+    font: 1rem sans-serif;
     cursor: pointer;
     background: #000000;
     color: #ECF8F9;
     line-height: 1.7;
     overflow: scroll;
+    font-size: 1rem;
+
 }
 .container{
     width: 80%;
@@ -25,7 +26,7 @@ body {
     overflow: hidden; 
 }
 
-.main-card {
+.card {
     padding: 2rem 2rem;
     margin: 0.625rem;
     border-radius: 1rem;
@@ -33,11 +34,35 @@ body {
     height: auto;
 }
 
-.description {
+.main-description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.first-description{
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #ffffff66;
+    padding: 0.225rem;
+    border-bottom: 1px solid #495057; 
+    margin-bottom: 0.225rem;
 }
+
+.second-description div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.275rem;
+}
+
+.search-city, a{
+    color: #fff;
+}
+
+.second-description{
+    margin-top: 0.225rem;
+}
+
 
 .temp h2 {
     font-size: 3rem;
@@ -76,14 +101,14 @@ hr {
 
 }
 
-.higlight .main-card div {
+.higlight .card div {
     margin:2rem auto;
     text-align: center;
 }
-.higlight .main-card div h4{
+.higlight .card div h4{
     font-size: 1.5rem;
 }
-.higlight .main-card span{
+.higlight .card span{
     margin-left: 0.625rem;
 }
 
@@ -158,8 +183,4 @@ form{
     width: 0;
     height: 100%;
     background: #0d1117;
-}
-
-#description{
-
 }
