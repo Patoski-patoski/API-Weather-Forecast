@@ -21,11 +21,11 @@
         <div class="main-description">
                 <div class="first-description">
                     <div class="weather">
-                        <img src="/images/cloudy.png">
-                        <h1>32 <sup>°C</sup></h1>
+                        <img id="icon-img" src="">
+                        <h1 id="temp"></h1>
                         <div class="weather-describe">
-                            <i class=" fa fa search-box"></i>
-                            <h3 class="main-weather">Rainy, <span>Storms Cloud</span></h3>
+                            <p id="main-weather"></p>
+                            <p id="other-weather"></p>
                         </div>
 
                     </div>
@@ -40,16 +40,15 @@
             <div class="second-description">
                 <div>
                     <i class="fa fa fa-location-arrow"></i>
-                    <p>Kano</p>
-                    <p>NG</p>
+                    <p id="city">Kano</p>
+                    <p id="country">NG</p>
                 </div>
                 <div>
-                    <i class="fa fa fa-calendar-days"></i>
-                    <p class="dayofmonth">5</p>
-                    <p class="month">June</p>
-                    <p class="year">2023</p>
-                    <p class="minute">12</p>
-                    <p class="seconds">38</p>
+                    <i class="fa fa fa-calendar-days"></i> 
+                    <p id="dayofmonth">5</p>
+                    <p id="month">June</p>
+                    <p id="year">2023</p><br>
+                    <p id="time">12</p>
                 </div>
             </div>
             
@@ -61,16 +60,15 @@
         <div class="card">
             <div>
                 <h4>Humidity<span class="material-symbols-outlined">temp_preferences_custom</span></h4>
-                <div class="circle"></div>
+                <canvas width="150"; height="150" class="circle1"></canvas>
             </div>
             <div>
                 <h4>Feels like<span class="material-symbols-outlined">temp_preferences_custom</span></h4>
-                <div class="circle"></div>
+                <canvas width="150"; height="150" class="circle2"></canvas>
             </div>
             <div>
                 <h4>Precipitation<span class="material-symbols-outlined">temp_preferences_custom</span></h4>
-
-                <div class="circle"></div>
+                <canvas width="150"; height="150" class="circle3"></canvas>
             </div>
         </div>
     </section>
