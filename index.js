@@ -77,4 +77,5 @@ const checkWeather = async () => {
   console.log(weatherData);
 }
 
-setTimeout(() => checkWeather(), 3000);
+// setTimeout(() => checkWeather(), 3000);
+checkWeather(); 
