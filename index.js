@@ -2,7 +2,7 @@ const main = document.querySelector('main');
 const searchCity = document.getElementById('#searchCity');
 
 const apiKey = "a6e755dd586961cb6abab58d3c3adb14";
-const apiURL = `https://api.openweathermap.org/data/2.5/weather?&q=lagos&units=metric`;
+const apiURL = `https://api.openweathermap.org/data/2.5/weather?&q=munich&units=metric`;
 
 const checkWeather = async () => {
   const requestWeather = await fetch(apiURL + `&appid=${apiKey}`);
@@ -14,6 +14,8 @@ const checkWeather = async () => {
   document.getElementById("other-weather").innerText = `${weatherData["weather"][0]["description"]}`;
   document.getElementById("city").innerText = `${weatherData["name"]},`;
   document.getElementById("country").innerText = `${weatherData["sys"]["country"]}`;
+  document.querySelector(".pressure h4").innerText = `${weatherData["main"]["pressure"]} hPa`;
+  
 
   //dates
 
@@ -41,7 +43,6 @@ const checkWeather = async () => {
       const centerX = canvasWidth / 2;
       const centerY = canvasHeight / 2;
 
-
       // Set the text properties
       ctx.font = "bold 24px Arial";
       ctx.textAlign = "center";
@@ -63,7 +64,6 @@ const checkWeather = async () => {
       ctx.arc(75, 75, 70, 0, (2 * Math.PI * value) / 100);
       ctx.stroke();
 
-      // return text;
     }
     else
     {
@@ -77,5 +77,5 @@ const checkWeather = async () => {
   console.log(weatherData);
 }
 
-// setTimeout(() => checkWeather(), 3000);
-checkWeather(); 
+setTimeout(() => checkWeather(), 3000);
+// checkWeather(); 

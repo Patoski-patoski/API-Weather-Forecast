@@ -19,61 +19,98 @@
 
     <main class="card">
         <div class="main-description">
-                <div class="first-description">
-                    <div class="weather">
-                        <img id="icon-img" src="">
-                        <h1 id="temp"></h1>
-                        <div class="weather-describe">
-                            <p id="main-weather"></p>
-                            <p id="other-weather"></p>
-                        </div>
-
+            <div class="first-description">
+                <div class="weather">
+                    <img id="icon-img" src="">
+                    <h1 id="temp"></h1>
+                    <div class="weather-describe">
+                        <p id="main-weather"></p>
+                        <p id="other-weather"></p>
                     </div>
 
+                </div>
 
-                    <div class="search-city"> 
-                        <a href=""><i class="fa- fa fa-search"></i></a>
-                    </div>
+
+                <div class="search-city">
+                    <a href=""><i class="fa- fa fa-search"></i></a>
                 </div>
             </div>
+        </div>
 
-            <div class="second-description">
-                <div>
-                    <i class="fa fa fa-location-arrow"></i>
-                    <p id="city">Kano</p>
-                    <p id="country">NG</p>
-                </div>
-                <div>
-                    <i class="fa fa fa-calendar-days"></i> 
-                    <p id="dayofmonth">5</p>
-                    <p id="month">June</p>
-                    <p id="year">2023</p><br>
-                    <p id="time">12</p>
-                </div>
+        <div class="second-description">
+            <div>
+                <i class="fa fa fa-location-arrow"></i>
+                <p id="city">Kano</p>
+                <p id="country">NG</p>
             </div>
-            
+            <div>
+                <i class="fa fa fa-calendar-days"></i>
+                <p id="dayofmonth">5</p>
+                <p id="month">June</p>
+                <p id="year">2023</p><br>
+                <p id="time">12</p>
+            </div>
+        </div>
+
     </main>
 
     </div>
 
     <section class="higlight">
         <div class="card">
-            <div>
-                <h4>Humidity<span class="material-symbols-outlined">temp_preferences_custom</span></h4>
-                <canvas width="150"; height="150" class="circle1"></canvas>
-            </div>
-            <div>
-                <h4>Feels like<span class="material-symbols-outlined">temp_preferences_custom</span></h4>
-                <canvas width="150"; height="150" class="circle2"></canvas>
-            </div>
-            <div>
-                <h4>Precipitation<span class="material-symbols-outlined">temp_preferences_custom</span></h4>
-                <canvas width="150"; height="150" class="circle3"></canvas>
+            <h4>Humidity</h4><span class="material-symbols-outlined">temp_preferences_custom</span>
+            <canvas width="150" ; height="150" class="circle1"></canvas>
+        </div>
+        <div class="card">
+            <h4>Feels like</h4><span class="material-symbols-outlined">dew_point</span>
+            <canvas width="150" ; height="150" class="circle2"></canvas>
+        </div>
+        <div class="card">
+            <h4>Cloud</h4><span class="material-symbols-outlined">cloudy</span>
+            <canvas width="150" ; height="150" class="circle3"></canvas>
+        </div>
+    </section>
+
+    <!-- visibility ========== -->
+
+    <section class="Visibiity">
+        <div class="container">visibility</div>
+        <div class="card">
+            <div class="visibility">
+                <img src="images/visibility.png" alt="visible" width="25%">
+                <h4>13:35</h4>
+                <p>Lorem ipsum dolor sit</p>
             </div>
         </div>
     </section>
 
-    <!-- wind============== -->
+    <!-- wind status============== -->
+
+    <section class="Pressure">
+        <div class="container">Pressure</div>
+        <div class="card">
+            <div class="pressure">
+                <img src="images/pressure.png" alt="pressure">
+                <h4>Poiowo</h4>
+                <p>Lorem ipsum dolor sit am.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- sunrise/ others ========== -->
+
+    <section class="Sunrise">
+        <div class="container">Sunrise</div>
+        <div class="card">
+            <div class="sunrise">
+                <img src="images/sunny_s_cloudy.png" alt="sunny">
+                <h4>13:35</h4>
+                <p>Lorem ipsum dolor sit.</p>
+
+            </div>
+    </section>
+
+    <!-- Todays/hours forecast -->
 
     <section class="today-at">
         <div class="container">Today's Forcast</div>
@@ -114,44 +151,8 @@
         </div>
     </section>
 
-    <!-- visibility ========== -->
 
-    <section class="Ultra-Violet">
-        <div class="container">visibility</div>
-        <div class="card">
-            <div class="visibility">
-                <img src="images/sunny_s_cloudy.png" alt="u-v index" width="25%">
-                <h4>13:35</h4>
-            </div>
-        </div>
-    </section>
-
-    <!-- visibility ========== -->
-
-    <section class="Ultra-Violet">
-        <div class="container">Ultra-Violet Index </div>
-        <div class="card">
-            <div class="uv">
-                <img src="images/sunny_s_cloudy.png" alt="u-v index" width="25%">
-                <h4>13:35</h4>
-            </div>
-        </div>
-    </section>
-
-    <!-- sunrise ========== -->
-
-
-    <section class="Sunrise">
-        <div class="container">Sunrise</div>
-        <div class="card">
-            <div class="sunrise">
-                <img src="images/sunny_s_cloudy.png" alt="u-v index" width="25%">
-                <h4>13:35</h4>
-                <h4>13:35</h4>
-            </div>
-        </div>
-    </section>
-
+    <!---- 7 days forecast -->
 
     <section class="main-highlight">
         <div class="container">
@@ -196,8 +197,6 @@
         </div>
 
     </section>
-
-
 
     <script src="/index.js"></script>
 </body>
