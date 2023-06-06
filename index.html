@@ -21,16 +21,13 @@
         <div class="main-description">
             <div class="first-description">
                 <div class="weather">
-                    <img id="icon-img" src="">
-                    <h1 id="temp"></h1>
+                    <img id="icon-img">
+                    <div class="temp"></div>
                     <div class="weather-describe">
                         <p id="main-weather"></p>
                         <p id="other-weather"></p>
                     </div>
-
                 </div>
-
-
                 <div class="search-city">
                     <a href=""><i class="fa- fa fa-search"></i></a>
                 </div>
@@ -40,15 +37,15 @@
         <div class="second-description">
             <div>
                 <i class="fa fa fa-location-arrow"></i>
-                <p id="city">Kano</p>
-                <p id="country">NG</p>
+                <p id="city"></p>
+                <p id="country"></p>
             </div>
             <div>
                 <i class="fa fa fa-calendar-days"></i>
-                <p id="dayofmonth">5</p>
-                <p id="month">June</p>
-                <p id="year">2023</p><br>
-                <p id="time">12</p>
+                <p id="dayofmonth"></p>
+                <p id="month"></p>
+                <p id="year"></p><br>
+                <p id="time"></p>
             </div>
         </div>
 
@@ -59,15 +56,15 @@
     <section class="higlight">
         <div class="card">
             <h4>Humidity</h4><span class="material-symbols-outlined">temp_preferences_custom</span>
-            <canvas width="150" ; height="150" class="circle1"></canvas>
+            <canvas width="100" ; height="100" class="circle1"></canvas>
         </div>
         <div class="card">
             <h4>Feels like</h4><span class="material-symbols-outlined">dew_point</span>
-            <canvas width="150" ; height="150" class="circle2"></canvas>
+            <canvas width="100" ; height="100" class="circle2"></canvas>
         </div>
         <div class="card">
-            <h4>Cloud</h4><span class="material-symbols-outlined">cloudy</span>
-            <canvas width="150" ; height="150" class="circle3"></canvas>
+            <h4>Clouds</h4><span class="material-symbols-outlined">cloudy</span>
+            <canvas width="100" ; height="100" class="circle3"></canvas>
         </div>
     </section>
 
@@ -78,125 +75,78 @@
         <div class="card">
             <div class="visibility">
                 <img src="images/visibility.png" alt="visible" width="25%">
-                <h4>13:35</h4>
-                <p>Lorem ipsum dolor sit</p>
+                <div>value: <h4></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- pressure status============== -->
+
+    <section>
+        <div class="container">Pressure</div>
+        <div class="card">
+            <div class="pressure">
+                <img src="images/pressure.png" alt="pressure">
+                <div>
+                    <p>Value:</p>
+                    <h4></h4>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- wind status============== -->
 
-    <section class="Pressure">
-        <div class="container">Pressure</div>
+    <section>
+        <div class="container">Wind</div>
         <div class="card">
-            <div class="pressure">
-                <img src="images/pressure.png" alt="pressure">
-                <h4>Poiowo</h4>
-                <p>Lorem ipsum dolor sit am.</p>
+            <div class="wind">
+                <div>
+                    <i class="fa fa-wind fa-3x"></i>
+                </div>
+                <div>
+                    <div class="wind-speed">speed: <span></span></div>
+                    <div class="wind-degree">degree: <span></span></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- sunrise/ others ========== -->
+    <!-- sunrise/ set ========== -->
 
-    <section class="Sunrise">
-        <div class="container">Sunrise</div>
+    <section>
+        <div class="container sun">
+            <p>Sunrise at</p>
+            <p>Sunset at</p>
+        </div>
         <div class="card">
             <div class="sunrise">
-                <img src="images/sunny_s_cloudy.png" alt="sunny">
-                <h4>13:35</h4>
-                <p>Lorem ipsum dolor sit.</p>
-
+                <div>
+                    <img src="images/sunrise.png" alt="sunny">
+                    <h4 class="sun-rise"></h4>
+                </div>
+                <div>
+                    <img src="images/sunset.png" alt="sunset">
+                    <h4 class="sun-set"></h4>
+                </div>
             </div>
     </section>
-
-    <!-- Todays/hours forecast -->
-
-    <section class="today-at">
-        <div class="container">Today's Forcast</div>
+    <section class="others">
+        <div class="container">Others</div>
         <div class="card">
-            <div class="wind">
-                <h4>13:35</h4>
-                <span class="material-symbols-outlined">temp_preferences_custom</span>
-                <p>140C</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="wind">
-                <h4>13:35</h4>
-                <span class="material-symbols-outlined">temp_preferences_custom</span>
-                <p>140C</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="wind">
-                <h4>13:35</h4>
-                <span class="material-symbols-outlined">temp_preferences_custom</span>
-                <p>140C</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="wind">
-                <h4>13:35</h4>
-                <span class="material-symbols-outlined">temp_preferences_custom</span>
-                <p>140C</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="wind">
-                <h4>13:35</h4>
-                <span class="material-symbols-outlined">temp_preferences_custom</span>
-                <p>140C</p>
+            <div class="others">
+                <h4 class="longitude">Longitude: <span></span></h4>
+                <h4 class="latitude">Latitude: <span></span></h4>
+                <h4 class="min-temp">minimum-temperature: <span></span></h4>
+                <h4 class="max-temp">maximum-temperature: <span></span></h4>
             </div>
         </div>
     </section>
 
-
-    <!---- 7 days forecast -->
-
-    <section class="main-highlight">
-        <div class="container">
-            <h4>7 Days Forecast</h4>
-        </div>
-        <div class="card">
-            <div class="days-forecast">
-                <div class="days-highlight"></div>
-                <span class="material-symbols-outlined">temp_preferences_custom</span>
-                <div class="temp">29</div>
-                <div class="date">03<span class="month">June</span></div>
-                <div class="day">friday</div>
-            </div>
-            <div class="days-forecast">
-                <div class="days-highlight"></div>
-                <span class="material-symbols-outlined">temp_preferences_custom</span>
-                <div class="temp">29</div>
-                <div class="date">03<span class="month">June</span></div>
-                <div class="day">friday</div>
-            </div>
-            <div class="days-forecast">
-                <div class="days-highlight"></div>
-                <span class="material-symbols-outlined">temp_preferences_custom</span>
-                <div class="temp">29</div>
-                <div class="date">03<span class="month">June</span></div>
-                <div class="day">friday</div>
-            </div>
-            <div class="days-forecast">
-                <div class="days-highlight"></div>
-                <span class="material-symbols-outlined">temp_preferences_custom</span>
-                <div class="temp">29</div>
-                <div class="date">03<span class="month">June</span></div>
-                <div class="day">friday</div>
-            </div>
-            <div class="days-forecast">
-                <div class="days-highlight"></div>
-                <span class="material-symbols-outlined">temp_preferences_custom</span>
-                <div class="temp">29</div>
-                <div class="date">03<span class="month">June</span></div>
-                <div class="day">friday</div>
-            </div>
-        </div>
-
-    </section>
+    <footer>
+        <P class="container">Powered by Open Weather <img src="/images/favicon.ico" alt="" srcset=""></P>
+    </footer>
 
     <script src="/index.js"></script>
 </body>
