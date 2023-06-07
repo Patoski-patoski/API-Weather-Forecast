@@ -1,4 +1,10 @@
 "use strict"
+const main = document.querySelector("main");
+const searchCity = document.querySelector(".fa-search");
+searchCity.addEventListener("click", () => {
+  main.classList.add("close");
+
+})
 
 const apiKey = "a6e755dd586961cb6abab58d3c3adb14";
 const apiURL = `https://api.openweathermap.org/data/2.5/weather?&q=abuja&units=metric`;
@@ -18,8 +24,6 @@ async function checkWeather() {
   document.getElementById("country").innerText = sys.country;
   document.querySelector(".pressure h4").innerText = main.pressure + "hPa";
   document.querySelector(".visibility h4").innerText = visibility + "m";
-  document.querySelector(".wind-speed span").innerText = wind.speed;
-  document.querySelector(".wind-degree span").innerText += wind.deg;
 
   //date and time
 
@@ -32,27 +36,26 @@ async function checkWeather() {
   document.getElementById("time").innerText = `${date.getHours()}:${date.getMinutes()}`;
 
 
-
-//get sunrise and sunset
+  //get sunrise and sunset
 
   function getSunRise(value) {
     const timestamp = value;
     const date = new Date(timestamp * 1000); // Multiply by 1000 to convert from seconds to milliseconds
     const result = date.getHours() + ':' + date.getMinutes();
-    console.log(result);
     return result;
   }
 
- document.querySelector(".sun-rise").innerText = getSunRise(sys["sunrise"]);
- document.querySelector(".sun-set").innerText = getSunRise(sys["sunset"]);
+  document.querySelector(".sun-rise").innerText = getSunRise(sys["sunrise"]);
+  document.querySelector(".sun-set").innerText = getSunRise(sys["sunset"]);
 
+  //canvas humidity, clouds feels-like
 
-//canvas humidity, clouds feels-like
-  
-  function draw(canva, text, value = 60) {
+  function draw(canva, text, value) {
     const canvas = document.querySelector(canva);
+    canvas.addEventListener("mouseover", () => {
+      canvas.style.transform = "rotate(360deg)";
+    })
     if (canvas.getContext) {
-
       const ctx = canvas.getContext("2d");
       // Set the canvas dimensions
       const canvasWidth = canvas.width;
@@ -92,6 +95,8 @@ async function checkWeather() {
   draw(".circle3", Math.round(clouds.all) + "%", clouds.all);
 
   //wind
+  document.querySelector(".wind-speed span").innerText = wind.speed;
+  document.querySelector(".wind-degree span").innerText += wind.deg;
 
   //others
   document.querySelector(".longitude span").innerText = coord.lon;
@@ -99,8 +104,7 @@ async function checkWeather() {
   document.querySelector(".min-temp span").innerText += main.temp_min + "°C";
   document.querySelector(".max-temp span").innerText += main.temp_max + "°C";
 
-  console.log(weatherData);
+  // console.log(weatherData);
 }
 
-// setTimeout(() => checkWeather(), 3000);
 checkWeather(); 
