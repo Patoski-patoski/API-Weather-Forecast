@@ -6,6 +6,7 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-size: 17px;
 }
 
 body {
@@ -17,11 +18,18 @@ body {
     font-size: 1rem;
 }
 
-.close{
-    display: "none";
-    /* border: 3px red solid; */
+.searh-btn{
+    display: block !important;
 }
 
+
+#search  {
+    padding: 1rem 3rem;
+    border: none;
+    outline: none;
+    text-align: left;
+    
+}
 .fa-search{
     font-size: 1.5rem;
     margin-top: 2rem;

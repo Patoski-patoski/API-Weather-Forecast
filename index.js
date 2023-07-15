@@ -1,8 +1,10 @@
 "use strict"
 const main = document.querySelector("main");
-const searchCity = document.querySelector(".fa-search");
+const searchBtn = document.querySelector(".search-btn");
+
 searchCity.addEventListener("click", () => {
-  main.classList.add("close");
+  main.style.display = "block";
+  document.body.style.backgroundColor = "#fff"; 
 
 })
 
@@ -104,7 +106,7 @@ async function checkWeather() {
   document.querySelector(".min-temp span").innerText += main.temp_min + "°C";
   document.querySelector(".max-temp span").innerText += main.temp_max + "°C";
 
-  // console.log(weatherData);
+  console.log(weatherData);
 }
 
 checkWeather(); 
