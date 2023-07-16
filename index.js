@@ -1,21 +1,38 @@
 "use strict"
+
+const id = document.getElementById("search-city");
+const button = document.getElementById("search-city-btn");
+const errorMsg = document.querySelector(".error");
 const main = document.querySelector("main");
-const searchBtn = document.querySelector(".search-btn");
-
-searchCity.addEventListener("click", () => {
-  main.style.display = "block";
-  document.body.style.backgroundColor = "#fff"; 
-
-})
 
 const apiKey = "a6e755dd586961cb6abab58d3c3adb14";
-const apiURL = `https://api.openweathermap.org/data/2.5/weather?&q=abuja&units=metric`;
+let apiURL;
+
+button.addEventListener("click", () => {
+  if (id.value === "") {
+    errorMsg.style.display = "flex";
+    main.style.display = 'none';
+    alert("pop")
+  }
+  else {
+    main.style.display = 'block';
+    errorMsg.style.display = "none";
+    apiURL = `https://api.openweathermap.org/data/2.5/weather?&q=${id.value}&appid=a6e755dd586961cb6abab58d3c3adb14&units=metric`;
+    checkWeather();
+  }
+
+})
 
 async function checkWeather() {
 
   const requestWeather = await fetch(apiURL + `&appid=${apiKey}`);
   let weatherData = await requestWeather.json();
 
+  if (requestWeather.status == 404) {
+    errorMsg.style.display = "flex";
+    document.querySelector("main").style.display = 'none';
+    
+  }
   const { clouds, coord, main, name, sys, visibility, weather, wind } = weatherData;
 
   document.getElementById("icon-img").src = `https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
@@ -36,7 +53,6 @@ async function checkWeather() {
   document.getElementById("dayofmonth").innerText = date.getDate() + ', ';
   document.getElementById("year").innerText = date.getFullYear() + '. ';
   document.getElementById("time").innerText = `${date.getHours()}:${date.getMinutes()}`;
-
 
   //get sunrise and sunset
 
@@ -105,8 +121,4 @@ async function checkWeather() {
   document.querySelector(".latitude span").innerText += coord.lat;
   document.querySelector(".min-temp span").innerText += main.temp_min + "°C";
   document.querySelector(".max-temp span").innerText += main.temp_max + "°C";
-
-  console.log(weatherData);
-}
-
-checkWeather(); 
+};

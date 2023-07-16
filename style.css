@@ -9,33 +9,90 @@
     font-size: 17px;
 }
 
+
 body {
     font: 1rem/sans-serif;
     background: #000;
     color: #fff;
     line-height: 1.7;
     overflow: scroll;
+    height: 100%;
     font-size: 1rem;
 }
 
-.searh-btn{
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 2rem;
+}
+
+main {
+    display: none;
+}
+
+.error {
+    color: #fff;
+    font-weight: 100;
+    display: none;
+}
+
+.center-content {
+    text-align: center;
+}
+
+.center-content button {
+    padding: 10px;
+    border: none;
+    background-color: #0d1117;
+    color: #fff;
+    transition: 3s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+}
+
+.center-content button:hover {
+    opacity: 0.8;
+    background-color: #fff;
+    color: #0d1117;
+    transition: 1s ease-in-out;
+}
+
+.center-content input[type="search"] {
+    padding: 15px;
+    border-radius: 20px;
+    margin-left: 10px;
+    outline: none;
+    transition: 1s ease-in-out;
+    border: none;
+}
+
+.center-content input[type="search"]:focus {
+    background-color: #0d1117;
+    color: #fff;
+    transition: 3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.searh-btn {
     display: block !important;
 }
 
 
-#search  {
+#search {
     padding: 1rem 3rem;
     border: none;
     outline: none;
     text-align: left;
-    
+
 }
-.fa-search{
+
+.fa-search {
     font-size: 1.5rem;
     margin-top: 2rem;
     transition: ease-in-out;
 }
-.fa-search:hover{
+
+.fa-search:hover {
     font-size: 1.8rem;
     transition: 2s ease-in;
 }
@@ -58,7 +115,7 @@ body {
 
 .card:hover {
     scale: 0.9;
-    transition:  2s cubic-bezier(0.23, 1, 0.320, 1);
+    transition: 2s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
 canvas {
@@ -69,13 +126,11 @@ canvas {
     display: block;
     margin: 3rem auto;
     transition: 2s cubic-bezier(0.23, 1, 0.320, 1);
-    transform: rotate(180deg);
 }
 
-canvas:hover{
+canvas:hover {
     scale: 1.3;
     transition: 3s ease-in-out;
-    transform: rotate(180deg);
 }
 
 .main-description {
@@ -100,7 +155,7 @@ canvas:hover{
 }
 
 
-.temp{
+.temp {
     font-size: 3rem;
 }
 
@@ -136,25 +191,29 @@ a {
     margin-left: 0.625rem;
 }
 
-.visibility img, .pressure img{
+.visibility img,
+.pressure img {
     background-color: #fff;
     border-radius: 50%;
     width: 25%;
 }
 
-.visibility, .pressure, .sun, .wind {
+.visibility,
+.pressure,
+.sun,
+.wind {
     display: flex;
     justify-content: space-between;
 }
 
-.sunrise{
+.sunrise {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto;
 }
 
-.sunrise h4{
+.sunrise h4 {
     margin-left: 2rem;
 }
 
@@ -163,14 +222,19 @@ a {
     gap: 0.625rem;
 }
 
-
-footer{
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
+    margin: 1rem 1rem;
 }
-footer img{
+
+footer img {
     width: 10%;
     border-radius: 50%;
 }
+
+
+/* @media (max-width: 600px) {
+    
+} */
