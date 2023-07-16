@@ -12,7 +12,6 @@ button.addEventListener("click", () => {
   if (id.value === "") {
     errorMsg.style.display = "flex";
     main.style.display = 'none';
-    alert("pop")
   }
   else {
     main.style.display = 'block';
@@ -20,7 +19,6 @@ button.addEventListener("click", () => {
     apiURL = `https://api.openweathermap.org/data/2.5/weather?&q=${id.value}&appid=a6e755dd586961cb6abab58d3c3adb14&units=metric`;
     checkWeather();
   }
-
 })
 
 async function checkWeather() {

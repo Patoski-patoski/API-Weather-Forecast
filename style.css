@@ -43,11 +43,13 @@ main {
 }
 
 .center-content button {
-    padding: 10px;
+    padding: 0.625rem;
     border: none;
     background-color: #0d1117;
     color: #fff;
     transition: 3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    border-radius: 5px;
+    margin-left: 0.624rem;
 
 }
 
@@ -59,7 +61,7 @@ main {
 }
 
 .center-content input[type="search"] {
-    padding: 15px;
+    padding: 0.625rem;
     border-radius: 20px;
     margin-left: 10px;
     outline: none;
@@ -92,10 +94,6 @@ main {
     transition: ease-in-out;
 }
 
-.fa-search:hover {
-    font-size: 1.8rem;
-    transition: 2s ease-in;
-}
 
 .container {
     width: 80%;
@@ -105,11 +103,13 @@ main {
 
 .card {
     padding: 2rem 2rem;
-    margin: 0.625rem;
+    margin: 0 auto;
     border-radius: 1rem;
     background: #0d1117;
     height: auto;
+    width: 80%;
     overflow: hidden;
+    margin-top: 0.625rem;
     transition: 1s ease-in-out;
 }
 
@@ -153,7 +153,6 @@ canvas:hover {
     align-items: center;
     gap: 0.275rem;
 }
-
 
 .temp {
     font-size: 3rem;
@@ -217,24 +216,50 @@ a {
     margin-left: 2rem;
 }
 
-.main-highlight .days-forecast {
-    display: flex;
-    gap: 0.625rem;
-}
-
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem 1rem;
+    margin-top: 3rem;
 }
 
 footer img {
     width: 10%;
     border-radius: 50%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
+@media (min-width: 484px) {
 
-/* @media (max-width: 600px) {
-    
-} */
+    body {
+     
+        opacity: 0.7;
+        transition: 1s linear;
+    }
+
+    body:hover {
+        opacity: 1;
+        transition: 2s ease-in;
+    }
+
+    .card {
+        margin: 0 auto;
+        width: 50%;
+        transition: none;
+    }
+
+    .center-container {
+        margin-bottom: 2rem;
+    }
+
+    .visibility img,
+    .pressure img {
+        width: 15%;
+    }
+
+    .container {
+        width: 50%;
+    }
+
+}
