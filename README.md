@@ -13,7 +13,7 @@ A simple weather app that provides current weather information for a given locat
 
 ## Demo
 
-You can see a live demo of the app [here](https://patoski-patoski.github.io/API-Weather-Forecast/).
+You can see a live demo of the app [here](https://api-weather-forecast-8j002cjek-patoski-patoski.vercel.app/).
 
 ## Installation
 
